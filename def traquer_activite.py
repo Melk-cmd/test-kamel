@@ -1,32 +1,30 @@
 def traquer_activite():
     historique_pas = []
     
-    # --- PARTIE 1 : LA SAISIE ---
+    # --- PART 1: INPUT ---
     while True:
-        pas = input("Combien de pas as-tu fait ? (ou tape 'fin' pour arrêter) : ")
+        pas = input("How many steps did you take? (or type 'fin' to stop): ")
         if pas == "fin":
-            break # On sort de la boucle while
+            break  # Exit the while loop
             
         try:
             nombre_de_pas = int(pas)
         except ValueError:
-            print("Erreur de saisie invalide")
+            print("Invalid input error")
         else:
             historique_pas.append(nombre_de_pas)
-            print(nombre_de_pas, "pas ajoutés à l'historique")
+            print(nombre_de_pas, "steps added to the history")
             break
             
-    # --- PARTIE 2 : LE BILAN ---
-    # La boucle for est maintenant reculée d'un cran vers la gauche
-    print("\n--- Bilan de tes marches ---")
+    # --- PART 2: SUMMARY ---
+    print("\n--- Summary of your walks ---")
     for releve in historique_pas:
-        # On utilise bien 'releve' dans les affichages
         if releve >= 20000:
-            print("Excellent :", releve, "pas. L'objectif est pulvérisé !")
+            print("Excellent:", releve, "steps. The goal is smashed!")
         elif releve >= 10000:
-            print("Correct :", releve, "pas. C'est une bonne base.")
+            print("Good:", releve, "steps. That's a good base.")
         else:
-            print("Faible :", releve, "pas. Il faudra se rattraper demain.")
+            print("Low:", releve, "steps. You'll have to catch up tomorrow.")
 
-# On lance le programme
+# Start the program
 traquer_activite()
