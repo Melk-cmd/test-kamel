@@ -26,5 +26,11 @@ def traquer_activite():
         else:
             print("Low:", releve, "steps. You'll have to catch up tomorrow.")
 
+<<<<<<< HEAD
 # Start the program
 traquer_activite()
+=======
+# On lance le programme
+traquer_activite()
+##HELLO
+>>>>>>> ac14e55 (Add hello comment)
